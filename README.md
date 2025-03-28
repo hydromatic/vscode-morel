@@ -27,6 +27,8 @@ Provides a
 [VSCode language extension](https://code.visualstudio.com/api/language-extensions/overview)
 for the [Morel](https://github.com/hydromatic/morel) language.
 
+![VSCode extension for Morel](screenshot-1.png)
+
 ## Quick start
 
 1. Install the extension
@@ -42,16 +44,15 @@ To do:
  * Dependabot
  * Bracket completion
  * Formatting
- * Add screenshot
  * Installation instructions
  * Make a release
- * Add to marketplace
+ * Add to VSCode marketplace
 
 ## More information
 
-* License: <a href="LICENSE">Apache Software License, Version 2.0</a>
+* License: [Apache Software License, Version 2.0](LICENSE)
 * Author: [Julian Hyde](https://github.com/julianhyde)
 * Source code: https://github.com/hydromatic/vscode-morel
 * Issues: https://github.com/hydromatic/vscode-morel/issues
-* <a href="HISTORY.md">Release notes and history</a>
-* <a href="HOWTO.md">HOWTO</a>
+* [Release notes and history](HISTORY.md)
+* [HOWTO](HOWTO.md)
