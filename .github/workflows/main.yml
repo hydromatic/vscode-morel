@@ -68,8 +68,9 @@ jobs:
         npm run pretest
     - name: 'Check for tabs'
       run: |
-        git grep -n "`printf '\t'`" . ':(exclude)*.png'
-        if [ $? -eq 0 ]; then
+        if git grep -n "`printf '\t'`" . ':(exclude)*.png'; then
+          echo 'No tabs'
+        else
           echo 'At least one file contained a tab'
           false
         fi
