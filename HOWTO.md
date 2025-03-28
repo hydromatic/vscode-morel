@@ -20,7 +20,8 @@ License.
 -->
 # vscode-morel HOWTO
 
-Here's some miscellaneous documentation about using and developing vscode-morel.
+Here's some miscellaneous documentation about using and developing
+vscode-morel.
 
 # Release
 

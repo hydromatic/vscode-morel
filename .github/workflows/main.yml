@@ -63,7 +63,24 @@ jobs:
         npm install --save-dev @types/node
         npm install --save-dev @types/mocha
     - name: 'Compile and lint'
-      # We cannot 'npm run test' because it cannot run headless
-      run: npm run pretest
+      run: |
+        # We cannot 'npm run test' because it cannot run headless
+        npm run pretest
+    - name: 'Check for tabs'
+      run: |
+        if git grep -n "`printf '\t'`" . ':(exclude)*.png'; then
+          echo 'At least one file contained a tab'
+          false
+        else
+          echo 'No tabs'
+        fi
+    - name: 'Check for trailing spaces'
+      run: |
+        if git grep -n ' $' . ':(exclude)*.png'; then
+          echo 'At least one file contained a trailing space'
+          false
+        else
+          echo 'No trailing spaces'
+        fi
 
 # End main.yaml
