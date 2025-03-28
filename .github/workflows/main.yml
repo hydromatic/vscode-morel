@@ -69,17 +69,18 @@ jobs:
     - name: 'Check for tabs'
       run: |
         if git grep -n "`printf '\t'`" . ':(exclude)*.png'; then
-          echo 'No tabs'
-        else
           echo 'At least one file contained a tab'
           false
+        else
+          echo 'No tabs'
         fi
     - name: 'Check for trailing spaces'
       run: |
-        git grep -n ' $' . ':(exclude)*.png'
-        if [ $? -eq 0 ]; then
+        if git grep -n ' $' . ':(exclude)*.png'; then
           echo 'At least one file contained a trailing space'
           false
+        else
+          echo 'No trailing spaces'
         fi
 
 # End main.yaml
