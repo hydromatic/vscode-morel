@@ -1,0 +1,77 @@
+{
+  "scopeName": "source.morel",
+  "fileTypes": ["morel"],
+  "name": "Morel",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.morel",
+          "match": "\\(\\*\\).*$"
+        },
+        {
+          "name": "comment.block.morel",
+          "begin": "\\(\\*",
+          "end": "\\*\\)"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.expression.morel",
+          "match": "\\b(let|in|end|fn|if|then|else|case|of|andalso|orelse|not)\\b"
+        },
+        {
+          "name": "keyword.declaration.morel",
+          "match": "\\b(val|fun|and|datatype)\\b"
+        },
+        {
+          "name": "keyword.query.morel",
+          "match": "\\b(compute|desc|exists|forall|from|group|into|join|on|order|require|skip|take|through|where|yield)\\b"
+        },
+        {
+          "name": "keyword.operator.morel",
+          "match": "\\b(not|elem|notelem)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.morel",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.morel",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.morel",
+          "match": "\\b[~]?\\d+(\\.\\d+)?([eE][~]?\\d+)\\b"
+        }
+      ]
+    }
+  }
+}

@@ -36,10 +36,10 @@ for the [Morel](https://github.com/hydromatic/morel) language.
 Done:
  * Create project
  * Enable CI
+ * Syntax highlighting
 
 To do:
  * Dependabot
- * Highlighting
  * Bracket completion
  * Formatting
  * Add screenshot

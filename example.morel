@@ -1,0 +1,69 @@
+(*
+Standard ML keywords are:
+    and andalso as case datatype else end
+    fn fun if in let of orelse,
+    rec then val
+
+Morel extended keywords:
+    compute distinct desc exists elem forall from
+    group into order through where yield
+
+Types:
+    int real string char bool unit list
+
+Constants:
+    false true nil
+*)
+
+val integers = [42, ~42];
+val reals = [3.14, ~3.14, 0.0, .5, ~.5, 6.023e23];
+val chars = [#"a", #" "];
+val bools = [true, false];
+val u = ();
+val tuple = (1, "hello", true, 3.14);
+val record = {key = "value", key2 = 42};
+
+(* A comment
+   that spans multiple lines *)
+val x = 42; (*) End-of-line comment
+
+if x < 10 orelse x > 100 then
+  let
+    val y = 1
+  in
+    (String.length o.key) + y
+  end
+else 
+  o.key2;
+
+fun factorial n =
+  if n = 0
+    then 1
+    else n * (factorial (n - 1));
+
+fun factorial2 0 = 1
+  | factorial2 n = n * (factorial2 (n - 1));
+
+val previous =
+  fn 0 => 0
+    | n => n - 1;
+
+val previous2 =
+  fn n =>
+    case n of
+       0 => 0
+     | n => n - 1;
+
+from e in scott.employees
+    join d in scott.departments on e.deptno = d.deptno
+  where e.sal > 50000
+  group e.deptno compute sum_sal = sum of sal, count
+  order count desc
+  skip 1
+  take 2;
+
+forall e in scott.employees
+  where e.job = 'CLERK'
+  require e.sal > 1000;
+
+(*) End example.morel

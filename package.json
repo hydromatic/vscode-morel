@@ -20,6 +20,21 @@
         "command": "morel.helloWorld",
         "title": "Hello World"
       }
+    ],
+    "grammars": [
+      {
+        "language": "morel",
+        "scopeName": "source.morel",
+        "path": "./syntaxes/morel.tmLanguage.json"
+      }
+    ],
+    "languages": [
+      {
+        "id": "morel",
+        "aliases": ["Morel", "morel"],
+        "extensions": [".morel"],
+        "configuration": "./language-configuration.json"
+      }
     ]
   },
   "scripts": {
