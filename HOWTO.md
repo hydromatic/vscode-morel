@@ -26,10 +26,10 @@ Here's some miscellaneous documentation about using and developing vscode-morel.
 
 Run the test:
 ```sh
-npm run test
+	npm run test
 ```
 
-Check for tabs and trailing spaces:
+Check for tabs and trailing spaces: 
 ```sh
 $ git grep -n '\t'
 $ git grep -n ' $'
