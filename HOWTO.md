@@ -30,7 +30,7 @@ Run the test:
 npm run test
 ```
 
-Check for tabs and trailing spaces: 
+Check for tabs and trailing spaces:
 ```sh
 $ git grep -n '\t'
 $ git grep -n ' $'
