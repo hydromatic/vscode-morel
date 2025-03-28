@@ -66,11 +66,15 @@ jobs:
       run: |
         # We cannot 'npm run test' because it cannot run headless
         npm run pretest
+    - name: 'Check for tabs'
+      run: |
         git grep -n "`printf '\t'`" . ':(exclude)*.png'
         if [ $? -eq 0 ]; then
           echo 'At least one file contained a tab'
           false
         fi
+    - name: 'Check for trailing spaces'
+      run: |
         git grep -n ' $' . ':(exclude)*.png'
         if [ $? -eq 0 ]; then
           echo 'At least one file contained a trailing space'
