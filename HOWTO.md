@@ -27,7 +27,7 @@ vscode-morel.
 
 Run the test:
 ```sh
-	npm run test
+npm run test
 ```
 
 Check for tabs and trailing spaces: 
